@@ -23,7 +23,7 @@ from langchain_groq import ChatGroq
 # os.environ['LANGCHAIN_API_KEY']=os.getenv('LANGCHAIN_API_KEY')
 # os.environ['LANGCHAIN_TRACING_V2']="true"
 # os.environ['LANCHAIN_PROJECT']=os.getenv("LANCHAIN_PROJECT")
-# os.environ['HF_TOKEN']=os.getenv('HF_TOKEN')
+# os.environ['HF_TOKEN']=os.getenv('HF_TOKEN')  
 
 
 api_wrapper_wiki=WikipediaAPIWrapper(top_k_results=1,doc_content_chars_max=250)
