@@ -15,14 +15,15 @@ from langchain.agents import create_openai_tools_agent,initialize_agent,AgentTyp
 from langchain.callbacks import StreamlitCallbackHandler
 
 load_dotenv()
-groq_api_key=os.getenv("GROQ_API_KEY")
+st.sidebar.title("Settings")
+groq_api_key=st.sidebar.text_input("enter your groq api key",type='password')
 from langchain_groq import ChatGroq
 
 
-os.environ['LANGCHAIN_API_KEY']=os.getenv('LANGCHAIN_API_KEY')
-os.environ['LANGCHAIN_TRACING_V2']="true"
-os.environ['LANCHAIN_PROJECT']=os.getenv("LANCHAIN_PROJECT")
-os.environ['HF_TOKEN']=os.getenv('HF_TOKEN')
+# os.environ['LANGCHAIN_API_KEY']=os.getenv('LANGCHAIN_API_KEY')
+# os.environ['LANGCHAIN_TRACING_V2']="true"
+# os.environ['LANCHAIN_PROJECT']=os.getenv("LANCHAIN_PROJECT")
+# os.environ['HF_TOKEN']=os.getenv('HF_TOKEN')
 
 
 api_wrapper_wiki=WikipediaAPIWrapper(top_k_results=1,doc_content_chars_max=250)
