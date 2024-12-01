@@ -14,7 +14,7 @@ from dotenv import load_dotenv
 from langchain.agents import create_openai_tools_agent,initialize_agent,AgentType
 from langchain.callbacks import StreamlitCallbackHandler
 
-load_dotenv()
+# load_dotenv()
 st.sidebar.title("Settings")
 groq_api_key=st.sidebar.text_input("enter your groq api key",type='password')
 from langchain_groq import ChatGroq
